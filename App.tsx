@@ -1,16 +1,11 @@
 /**
  * @format
  */
-
 import React from 'react';
 import { SafeAreaView, StyleSheet, View, Text, StatusBar } from 'react-native';
-
-import { Colors } from 'react-native/Libraries/NewAppScreen';
-
+import { Colors } from './src/styles/Color';
 import ActionList from './src/ActionList/ActionList';
-import { ActionListProps } from './src/ActionList/Interface';
-
-declare const global: { HermesInternal: null | {} };
+import { ActionListProps } from './src/ActionList/ListTypes';
 
 const App = () => {
     const actions: ActionListProps = {
@@ -55,14 +50,14 @@ const styles = StyleSheet.create({
     sectionTitle: {
         fontSize: 24,
         fontWeight: '600',
-        color: Colors.black,
+        color: Colors.Black,
         paddingVertical: 10,
     },
     sectionDescription: {
         marginTop: 8,
         fontSize: 18,
         fontWeight: '400',
-        color: Colors.dark,
+        color: Colors.Black,
     },
     highlight: {
         fontWeight: '700',

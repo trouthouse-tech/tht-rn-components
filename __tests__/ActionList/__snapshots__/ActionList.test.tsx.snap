@@ -83,7 +83,7 @@ exports[`<ActionList /> should match snapshot 1`] = `
               <Text
                 style={
                   Object {
-                    "color": "black",
+                    "color": "#000000",
                     "fontSize": 18,
                     "fontWeight": "600",
                   }
@@ -142,7 +142,7 @@ exports[`<ActionList /> should match snapshot 1`] = `
               <Text
                 style={
                   Object {
-                    "color": "black",
+                    "color": "#000000",
                     "fontSize": 18,
                     "fontWeight": "600",
                   }

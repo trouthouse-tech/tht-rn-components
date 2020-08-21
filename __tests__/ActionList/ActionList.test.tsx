@@ -2,7 +2,7 @@ import { render, cleanup } from 'react-native-testing-library';
 import React from 'react';
 
 import ActionList from '../../src/ActionList/ActionList';
-import { ActionListProps } from '../../src/ActionList/Interface';
+import { ActionListProps } from '../../src/ActionList/ListTypes';
 
 afterEach(cleanup);
 

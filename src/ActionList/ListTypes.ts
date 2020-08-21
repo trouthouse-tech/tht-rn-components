@@ -1,8 +1,8 @@
-export interface ActionListItemProps {
+export type ActionListItemProps = {
     title: string;
     route: string;
 }
 
-export interface ActionListProps {
+export type ActionListProps = {
     items: ActionListItemProps[];
 }

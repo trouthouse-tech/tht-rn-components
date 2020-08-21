@@ -2,7 +2,8 @@ import React from 'react';
 
 import { View, TouchableOpacity, StyleSheet, Text, Image } from 'react-native';
 
-import { ActionListItemProps } from './Interface';
+import { ActionListItemProps } from './ListTypes';
+import { Colors } from '../styles/Color';
 
 const ListItem: React.FC<ActionListItemProps> = ({ title, route }) => {
     const onPress = () => {
@@ -43,6 +44,6 @@ const styles = StyleSheet.create({
     textStyle: {
         fontSize: 18,
         fontWeight: '600',
-        color: 'black',
+        color: Colors.Black,
     },
 });
