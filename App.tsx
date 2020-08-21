@@ -4,27 +4,35 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet, View, Text, StatusBar} from 'react-native';
 import {Colors} from './src/styles/Color';
-import ActionList from './src/ActionList/ActionList';
-import {ActionListProps} from './src/ActionList/ListTypes';
+
+import {
+  MessageListProps,
+  MessageType,
+  MessageStatusEnum,
+} from './src/Messages/Types';
+
+import {MessageList} from './src/Messages/MessagesList';
 
 const App = () => {
-  const actions: ActionListProps = {
-    items: [
+  const messagesList: MessageListProps = {
+    messages: [
       {
-        title: 'Edit Account',
-        route: 'EditAccount',
+        messageType: MessageType.Requests,
+        name: 'Edwards Moses',
+        status: MessageStatusEnum.Completed,
+        date: new Date(),
       },
       {
-        title: 'Traffic',
-        route: 'Traffic',
+        messageType: MessageType.Sessions,
+        name: 'Joe Buey',
+        status: MessageStatusEnum.Scheduled,
+        date: new Date(),
       },
       {
-        title: 'Terms and Conditions',
-        route: 'TermsAndConditions',
-      },
-      {
-        title: 'Notifications',
-        route: 'Notifications',
+        messageType: MessageType.Requests,
+        name: 'Matthew Ruiz',
+        status: MessageStatusEnum.Canceled,
+        date: new Date(),
       },
     ],
   };
@@ -34,8 +42,8 @@ const App = () => {
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
         <View style={styles.sectionContainer}>
-          <Text style={styles.sectionTitle}>Settings</Text>
-          <ActionList items={actions.items} />
+          <Text style={styles.sectionTitle}>Help</Text>
+          <MessageList messages={messagesList.messages} />
         </View>
       </SafeAreaView>
     </>
