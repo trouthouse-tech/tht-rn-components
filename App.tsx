@@ -11,7 +11,7 @@ import {
   MessageStatusEnum,
 } from './src/Messages/Types';
 
-import {MessageList} from './src/Messages/MessagesList';
+import {MessageDisplay} from './src/Messages/MessageDisplay';
 
 const App = () => {
   const messagesList: MessageListProps = {
@@ -43,7 +43,7 @@ const App = () => {
       <SafeAreaView>
         <View style={styles.sectionContainer}>
           <Text style={styles.sectionTitle}>Help</Text>
-          <MessageList messages={messagesList.messages} />
+          <MessageDisplay messages={messagesList.messages} />
         </View>
       </SafeAreaView>
     </>
