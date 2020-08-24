@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import {SafeAreaView, StyleSheet, View, Text, StatusBar} from 'react-native';
-import {Colors} from './src/styles/Color';
+import {Colors} from './src/styles/';
 import ActionList from './src/ActionList/ActionList';
 import {ActionListProps} from './src/ActionList/ListTypes';
 
