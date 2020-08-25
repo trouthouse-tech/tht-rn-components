@@ -4,7 +4,7 @@ import moment from 'moment';
 import {View, Text, Image, StyleSheet, Dimensions} from 'react-native';
 
 import {MessageItemProps, MessageStatusEnum} from './Types';
-import {Colors} from '../styles/Color';
+import {Colors} from '../styles/';
 
 export const MessageItem: React.FC<MessageItemProps> = (props) => {
   const {

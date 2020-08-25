@@ -3,7 +3,7 @@ import React from 'react';
 import {View, Text, StyleSheet, TouchableWithoutFeedback} from 'react-native';
 
 import {MessageTogglerProps, MessageType} from './Types';
-import {Colors} from '../styles/Color';
+import {Colors} from '../styles/';
 
 export const MessageToggler: React.FC<MessageTogglerProps> = (props) => {
   const {currentMessageType, onPress} = props;
