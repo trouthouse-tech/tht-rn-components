@@ -4,35 +4,37 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet, View, Text, StatusBar} from 'react-native';
 
-import {
-  MessageListProps,
-  MessageType,
-  MessageStatusEnum,
-} from './src/Messages/Types';
+import {MessageTypes} from './src/Types/';
 
 import {MessageDisplay} from './src/Messages/MessageDisplay';
 
 import {Colors, Fonts} from './src/styles/';
 
 const App = () => {
-  const messagesList: MessageListProps = {
+  const messagesList: MessageTypes.MessageListProps = {
     messages: [
       {
-        messageType: MessageType.Requests,
+        messageType: MessageTypes.MessageTypeEnum.Requests,
         name: 'Edwards Moses',
-        status: MessageStatusEnum.Completed,
+        status: MessageTypes.MessageStatusEnum.Completed,
         date: new Date(),
       },
       {
-        messageType: MessageType.Sessions,
+        messageType: MessageTypes.MessageTypeEnum.Sessions,
         name: 'Joe Buey',
-        status: MessageStatusEnum.Scheduled,
+        status: MessageTypes.MessageStatusEnum.Scheduled,
         date: new Date(),
       },
       {
-        messageType: MessageType.Requests,
+        messageType: MessageTypes.MessageTypeEnum.Requests,
         name: 'Matthew Ruiz',
-        status: MessageStatusEnum.Canceled,
+        status: MessageTypes.MessageStatusEnum.Canceled,
+        date: new Date(),
+      },
+      {
+        messageType: MessageTypes.MessageTypeEnum.Sessions,
+        name: 'Types Working',
+        status: MessageTypes.MessageStatusEnum.Canceled,
         date: new Date(),
       },
     ],

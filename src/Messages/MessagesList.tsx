@@ -2,18 +2,20 @@ import React from 'react';
 
 import {View, FlatList, StyleSheet} from 'react-native';
 
-import {MessageItemProps, MessageListProps} from './Types';
+import {MessageTypes} from '../Types/';
 import {MessageItem} from './MessageItem';
 
-export const MessageList: React.FC<MessageListProps> = ({messages}) => {
+export const MessageList: React.FC<MessageTypes.MessageListProps> = ({
+  messages,
+}) => {
   return (
     <View style={styles.listStyle}>
       <FlatList
-        keyExtractor={(item: MessageItemProps, index: number) =>
+        keyExtractor={(item: MessageTypes.MessageItemProps, index: number) =>
           index.toString()
         }
         data={messages}
-        renderItem={({item}: {item: MessageItemProps}) => (
+        renderItem={({item}: {item: MessageTypes.MessageItemProps}) => (
           <MessageItem
             name={item.name}
             status={item.status}

@@ -1,17 +1,21 @@
 import React from 'react';
 
-import {View, Text} from 'react-native';
+import {View} from 'react-native';
 
-import {MessageListProps, MessageType} from './Types';
+import {MessageTypes} from '../Types/';
 import {MessageList} from './MessagesList';
 import {MessageToggler} from './MessageToggler';
 
-export const MessageDisplay: React.FC<MessageListProps> = ({messages}) => {
+export const MessageDisplay: React.FC<MessageTypes.MessageListProps> = ({
+  messages,
+}) => {
   const [currentMessageStatus, setcurrentMessageStatus] = React.useState<
-    MessageType
-  >(MessageType.Sessions);
+    MessageTypes.MessageTypeEnum
+  >(MessageTypes.MessageTypeEnum.Sessions);
 
-  const toggleMessageStatus = (selectedMessageStatus: MessageType) => {
+  const toggleMessageStatus = (
+    selectedMessageStatus: MessageTypes.MessageTypeEnum
+  ) => {
     console.log(selectedMessageStatus);
     setcurrentMessageStatus(selectedMessageStatus);
   };
@@ -19,7 +23,7 @@ export const MessageDisplay: React.FC<MessageListProps> = ({messages}) => {
   return (
     <View>
       <MessageToggler
-        onPress={(selectedMessageStatus: MessageType) => {
+        onPress={(selectedMessageStatus: MessageTypes.MessageTypeEnum) => {
           return toggleMessageStatus(selectedMessageStatus);
         }}
         currentMessageType={currentMessageStatus}

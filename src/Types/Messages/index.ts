@@ -11,19 +11,19 @@ export enum MessageStatusEnum {
   Completed = 'Completed',
 }
 
-export enum MessageType {
+export enum MessageTypeEnum {
   Sessions = 'Sessions',
   Requests = 'Requests',
 }
 
-export enum ScheduledMessageType {
+export enum ScheduledMessageTypeEnum {
   Scheduled = 'Scheduled',
   History = 'History',
 }
 
 //the first component type props
 export type MessageItemProps = BaseMessageProps & {
-  messageType: MessageType;
+  messageType: MessageTypeEnum;
 };
 
 export type MessageListProps = {
@@ -31,15 +31,15 @@ export type MessageListProps = {
 };
 
 export type MessageTogglerProps = {
-  currentMessageType: MessageType;
-  onPress: (selectedMessageStatus: MessageType) => void;
+  currentMessageType: MessageTypeEnum;
+  onPress: (selectedMessageStatus: MessageTypeEnum) => void;
 };
 
 //the second component type props
 export type ScheduledMessageItemProps = BaseMessageProps & {
   notes: string;
   durationInHours: number;
-  messageType: ScheduledMessageType;
+  messageType: ScheduledMessageTypeEnum;
 };
 
 export type ScheduledMessageListProps = {

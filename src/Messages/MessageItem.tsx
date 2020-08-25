@@ -3,17 +3,17 @@ import moment from 'moment';
 
 import {View, Text, Image, StyleSheet, Dimensions} from 'react-native';
 
-import {MessageItemProps, MessageStatusEnum} from './Types';
+import {MessageTypes} from '../Types/';
 import {Colors, Fonts} from '../styles/';
 
-export const MessageItem: React.FC<MessageItemProps> = (props) => {
+export const MessageItem: React.FC<MessageTypes.MessageItemProps> = (props) => {
   const {name, date, status, image = 'https://via.placeholder.com/150'} = props;
   return (
     <View style={styles.messageStyle}>
       <View>
         <Text style={styles.nameTextStyle}>{name}</Text>
 
-        {status !== MessageStatusEnum.Completed ? (
+        {status !== MessageTypes.MessageStatusEnum.Completed ? (
           <View style={styles.dateTextViewStyle}>
             <Text style={styles.dateDisplayTextStyle}>
               {moment(date).format('DD/MM/YY')}

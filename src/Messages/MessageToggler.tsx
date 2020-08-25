@@ -2,36 +2,40 @@ import React from 'react';
 
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 
-import {MessageTogglerProps, MessageType} from './Types';
+import {MessageTypes} from '../Types/';
 import {Colors, Fonts} from '../styles/';
 
-export const MessageToggler: React.FC<MessageTogglerProps> = (props) => {
+export const MessageToggler: React.FC<MessageTypes.MessageTogglerProps> = (
+  props
+) => {
   const {currentMessageType, onPress} = props;
 
   return (
     <View style={styles.tabsStyle}>
-      {Object.values(MessageType).map((key: MessageType, index: number) => {
-        const isSelected = currentMessageType === key;
-        return (
-          <TouchableOpacity
-            key={index}
-            onPress={() => {
-              onPress(key);
-            }}
-            style={[
-              styles.tabStyle,
-              isSelected ? styles.selectedTabStyle : null,
-            ]}>
-            <Text
+      {Object.values(MessageTypes.MessageTypeEnum).map(
+        (key: MessageTypes.MessageTypeEnum, index: number) => {
+          const isSelected = currentMessageType === key;
+          return (
+            <TouchableOpacity
+              key={index}
+              onPress={() => {
+                onPress(key);
+              }}
               style={[
-                styles.tabTextStyle,
-                isSelected ? styles.selectedTabTextStyle : null,
+                styles.tabStyle,
+                isSelected ? styles.selectedTabStyle : null,
               ]}>
-              {MessageType[key]}
-            </Text>
-          </TouchableOpacity>
-        );
-      })}
+              <Text
+                style={[
+                  styles.tabTextStyle,
+                  isSelected ? styles.selectedTabTextStyle : null,
+                ]}>
+                {MessageTypes.MessageTypeEnum[key]}
+              </Text>
+            </TouchableOpacity>
+          );
+        }
+      )}
     </View>
   );
 };
