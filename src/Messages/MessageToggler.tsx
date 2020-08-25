@@ -3,7 +3,7 @@ import React from 'react';
 import {View, Text, StyleSheet, TouchableWithoutFeedback} from 'react-native';
 
 import {MessageTogglerProps, MessageType} from './Types';
-import {Colors} from '../styles/';
+import {Colors, Fonts} from '../styles/';
 
 export const MessageToggler: React.FC<MessageTogglerProps> = (props) => {
   const {currentMessageType, onPress} = props;
@@ -32,11 +32,11 @@ export const MessageToggler: React.FC<MessageTogglerProps> = (props) => {
 
 const styles = StyleSheet.create({
   selectedTabStyle: {
-    fontSize: 15,
+    fontSize: Fonts.normal,
     textDecorationLine: 'underline',
   },
   tabStyle: {
-    fontSize: 15,
+    fontSize: Fonts.normal,
     color: Colors.Grey,
   },
 });

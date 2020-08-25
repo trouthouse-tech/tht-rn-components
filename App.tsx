@@ -12,7 +12,7 @@ import {
 
 import {MessageDisplay} from './src/Messages/MessageDisplay';
 
-import {Colors} from './src/styles/';
+import {Colors, Fonts} from './src/styles/';
 
 const App = () => {
   const messagesList: MessageListProps = {
@@ -57,14 +57,14 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
   },
   sectionTitle: {
-    fontSize: 24,
+    fontSize: Fonts.larger,
     fontWeight: '600',
     color: Colors.Black,
     paddingVertical: 10,
   },
   sectionDescription: {
     marginTop: 8,
-    fontSize: 18,
+    fontSize: Fonts.normal,
     fontWeight: '400',
     color: Colors.Black,
   },
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
   },
   footer: {
     color: Colors.Black,
-    fontSize: 12,
+    fontSize: Fonts.small,
     fontWeight: '600',
     padding: 4,
     paddingRight: 12,

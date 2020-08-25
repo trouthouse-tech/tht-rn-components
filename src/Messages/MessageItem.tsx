@@ -4,7 +4,7 @@ import moment from 'moment';
 import {View, Text, Image, StyleSheet, Dimensions} from 'react-native';
 
 import {MessageItemProps, MessageStatusEnum} from './Types';
-import {Colors} from '../styles/';
+import {Colors, Fonts} from '../styles/';
 
 export const MessageItem: React.FC<MessageItemProps> = (props) => {
   const {
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
   },
   nameTextStyle: {
     color: Colors.Black,
-    fontSize: 20,
+    fontSize: Fonts.large,
     fontWeight: '700',
   },
   dateTextViewStyle: {
@@ -63,11 +63,11 @@ const styles = StyleSheet.create({
   },
   dateDisplayTextStyle: {
     paddingHorizontal: 3,
-    fontSize: 16,
+    fontSize: Fonts.small,
     fontWeight: '600',
   },
   statusDisplayTextStyle: {
-    fontSize: 16,
+    fontSize: Fonts.small,
     fontWeight: '600',
   },
   messageImgStyle: {
