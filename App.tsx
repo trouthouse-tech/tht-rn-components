@@ -6,36 +6,44 @@ import {SafeAreaView, StyleSheet, View, Text, StatusBar} from 'react-native';
 
 import {MessageTypes} from './src/Types/';
 
-import {MessageDisplay} from './src/Messages/MessageDisplay';
+import {SessionDisplay} from './src/Sessions/SessionDisplay';
 
 import {Colors, Fonts} from './src/styles/';
 
 const App = () => {
-  const messagesList: MessageTypes.MessageListProps = {
+  const messagesList: MessageTypes.SessionMessageListProps = {
     messages: [
       {
-        messageType: MessageTypes.MessageTypeEnum.Requests,
+        messageType: MessageTypes.SessionMessageTypeEnum.Scheduled,
         name: 'Edwards Moses',
         status: MessageTypes.MessageStatusEnum.Completed,
         date: new Date(),
+        notes: "I'd like to work as a driver",
+        durationInHours: 3,
       },
       {
-        messageType: MessageTypes.MessageTypeEnum.Sessions,
+        messageType: MessageTypes.SessionMessageTypeEnum.History,
         name: 'Joe Buey',
         status: MessageTypes.MessageStatusEnum.Scheduled,
         date: new Date(),
+        notes: "I'd like to work as a driver",
+        durationInHours: 1,
       },
       {
-        messageType: MessageTypes.MessageTypeEnum.Requests,
+        messageType: MessageTypes.SessionMessageTypeEnum.Scheduled,
         name: 'Matthew Ruiz',
         status: MessageTypes.MessageStatusEnum.Canceled,
         date: new Date(),
+        notes: "I'd like to work as a driver",
+        durationInHours: 3,
       },
       {
-        messageType: MessageTypes.MessageTypeEnum.Sessions,
+        messageType: MessageTypes.SessionMessageTypeEnum.History,
         name: 'Types Working',
         status: MessageTypes.MessageStatusEnum.Canceled,
         date: new Date(),
+        notes: "I'd like to work as a Type that's working",
+        durationInHours: 2,
       },
     ],
   };
@@ -46,7 +54,7 @@ const App = () => {
       <SafeAreaView>
         <View style={styles.sectionContainer}>
           <Text style={styles.sectionTitle}>Help</Text>
-          <MessageDisplay messages={messagesList.messages} />
+          <SessionDisplay messages={messagesList.messages} />
         </View>
       </SafeAreaView>
     </>
