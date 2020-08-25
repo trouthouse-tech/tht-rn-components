@@ -7,13 +7,7 @@ import {MessageItemProps, MessageStatusEnum} from './Types';
 import {Colors, Fonts} from '../styles/';
 
 export const MessageItem: React.FC<MessageItemProps> = (props) => {
-  const {
-    name,
-    date,
-    messageType,
-    status,
-    image = 'https://via.placeholder.com/150',
-  } = props;
+  const {name, date, status, image = 'https://via.placeholder.com/150'} = props;
   return (
     <View style={styles.messageStyle}>
       <View>
@@ -31,7 +25,6 @@ export const MessageItem: React.FC<MessageItemProps> = (props) => {
         ) : (
           <Text style={styles.statusDisplayTextStyle}>{status}</Text>
         )}
-        <Text>{messageType}</Text>
       </View>
       <Image source={{uri: image}} style={styles.messageImgStyle} />
     </View>
@@ -43,7 +36,8 @@ const styles = StyleSheet.create({
   messageStyle: {
     borderWidth: StyleSheet.hairlineWidth,
     borderRadius: 15,
-    padding: 20,
+    paddingHorizontal: 20,
+    paddingVertical: 10,
     marginVertical: 10,
     justifyContent: 'space-between',
     flex: 1,

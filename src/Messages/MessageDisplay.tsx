@@ -29,7 +29,6 @@ export const MessageDisplay: React.FC<MessageListProps> = ({messages}) => {
           (m) => m.messageType === currentMessageStatus
         )}
       />
-      <Text>{currentMessageStatus}</Text>
     </View>
   );
 };

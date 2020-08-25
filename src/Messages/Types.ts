@@ -1,14 +1,8 @@
-import {GestureResponderEvent} from 'react-native';
-
-type BaseProps = {
+type BaseMessageProps = {
   name: string;
   date: Date;
   status: MessageStatusEnum;
   image?: string;
-};
-
-type BaseTogglerProps = {
-  onPress: (selectedMessageStatus: MessageType) => void;
 };
 
 export enum MessageStatusEnum {
@@ -28,7 +22,7 @@ export enum ScheduledMessageType {
 }
 
 //the first component type props
-export type MessageItemProps = BaseProps & {
+export type MessageItemProps = BaseMessageProps & {
   messageType: MessageType;
 };
 
@@ -36,12 +30,13 @@ export type MessageListProps = {
   messages: MessageItemProps[];
 };
 
-export type MessageTogglerProps = BaseTogglerProps & {
+export type MessageTogglerProps = {
   currentMessageType: MessageType;
+  onPress: (selectedMessageStatus: MessageType) => void;
 };
 
 //the second component type props
-export type ScheduledMessageItemProps = BaseProps & {
+export type ScheduledMessageItemProps = BaseMessageProps & {
   notes: string;
   durationInHours: number;
   messageType: ScheduledMessageType;
