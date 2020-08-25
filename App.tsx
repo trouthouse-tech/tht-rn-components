@@ -3,7 +3,6 @@
  */
 import React from 'react';
 import {SafeAreaView, StyleSheet, View, Text, StatusBar} from 'react-native';
-import {Colors} from './src/styles/Color';
 
 import {
   MessageListProps,
@@ -12,6 +11,8 @@ import {
 } from './src/Messages/Types';
 
 import {MessageDisplay} from './src/Messages/MessageDisplay';
+
+import {Colors} from './src/styles/';
 
 const App = () => {
   const messagesList: MessageListProps = {
