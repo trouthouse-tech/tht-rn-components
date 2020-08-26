@@ -6,7 +6,7 @@ import {SessionTypes} from '../Types';
 import {SessionItem} from './SessionItem';
 
 export const SessionList: React.FC<SessionTypes.SessionMessageListProps> = ({
-  messages,
+  sessions,
 }) => {
   return (
     <View style={styles.listStyle}>
@@ -15,7 +15,7 @@ export const SessionList: React.FC<SessionTypes.SessionMessageListProps> = ({
           item: SessionTypes.SessionMessageItemProps,
           index: number
         ) => index.toString()}
-        data={messages}
+        data={sessions}
         renderItem={({item}: {item: SessionTypes.SessionMessageItemProps}) => (
           <SessionItem
             name={item.name}

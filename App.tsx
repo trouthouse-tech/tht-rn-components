@@ -12,7 +12,7 @@ import {Colors, Fonts} from './src/styles/';
 
 const App = () => {
   const messagesList: SessionTypes.SessionMessageListProps = {
-    messages: [
+    sessions: [
       {
         messageType: SessionTypes.SessionMessageTypeEnum.Scheduled,
         name: 'Edwards Moses',
@@ -54,7 +54,7 @@ const App = () => {
       <SafeAreaView>
         <View style={styles.sectionContainer}>
           <Text style={styles.sectionTitle}>Help</Text>
-          <SessionDisplay messages={messagesList.messages} />
+          <SessionDisplay sessions={messagesList.sessions} />
         </View>
       </SafeAreaView>
     </>

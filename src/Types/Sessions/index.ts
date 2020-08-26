@@ -12,7 +12,7 @@ export type SessionMessageItemProps = BaseMessageProps & {
 };
 
 export type SessionMessageListProps = {
-  messages: SessionMessageItemProps[];
+  sessions: SessionMessageItemProps[];
 };
 
 export type SessionTogglerProps = {

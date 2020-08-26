@@ -1,0 +1,243 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SessionDisplay /> should match snapshot 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "borderBottomColor": "#C5CCD6",
+        "borderBottomWidth": 0.5,
+        "flexDirection": "row",
+        "marginHorizontal": 5,
+        "marginTop": 5,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "borderBottomColor": "#000000",
+          "borderBottomWidth": 3,
+          "color": "#D3D3D3",
+          "flex": 1,
+          "fontSize": 18,
+          "opacity": 1,
+          "paddingBottom": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#000000",
+              "fontSize": 20,
+            },
+            Object {
+              "fontWeight": "bold",
+            },
+          ]
+        }
+      >
+        Scheduled
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "color": "#D3D3D3",
+          "flex": 1,
+          "fontSize": 18,
+          "opacity": 1,
+          "paddingBottom": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#000000",
+              "fontSize": 20,
+            },
+            null,
+          ]
+        }
+      >
+        History
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "marginVertical": 10,
+      }
+    }
+  >
+    <RCTScrollView
+      data={
+        Array [
+          Object {
+            "date": 1598457958,
+            "durationInHours": 2,
+            "messageType": "Scheduled",
+            "name": "Edwards Moses",
+            "notes": "Second Test Note",
+            "status": "Canceled",
+          },
+        ]
+      }
+      disableVirtualization={false}
+      getItem={[Function]}
+      getItemCount={[Function]}
+      horizontal={false}
+      initialNumToRender={10}
+      keyExtractor={[Function]}
+      maxToRenderPerBatch={10}
+      onContentSizeChange={[Function]}
+      onEndReachedThreshold={2}
+      onLayout={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      removeClippedSubviews={false}
+      renderItem={[Function]}
+      scrollEventThrottle={50}
+      stickyHeaderIndices={Array []}
+      updateCellsBatchingPeriod={50}
+      viewabilityConfigCallbackPairs={Array []}
+      windowSize={21}
+    >
+      <View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            style={
+              Object {
+                "alignContent": "center",
+                "alignItems": "center",
+                "borderRadius": 15,
+                "borderWidth": 0.5,
+                "flex": 1,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "marginVertical": 10,
+                "paddingHorizontal": 20,
+                "paddingVertical": 10,
+              }
+            }
+          >
+            <View>
+              <Text
+                style={
+                  Object {
+                    "color": "#000000",
+                    "fontSize": 20,
+                    "fontWeight": "700",
+                  }
+                }
+              >
+                Edwards Moses
+              </Text>
+              <Text
+                numberOfLines={2}
+                style={
+                  Object {
+                    "fontSize": 16,
+                    "width": 250,
+                  }
+                }
+              >
+                Second Test Note
+              </Text>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "justifyContent": "flex-start",
+                    "paddingVertical": 4,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "fontSize": 16,
+                      "fontWeight": "600",
+                      "paddingHorizontal": 3,
+                    }
+                  }
+                >
+                  26/08/20
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "fontSize": 16,
+                      "fontWeight": "600",
+                      "paddingHorizontal": 3,
+                    }
+                  }
+                >
+                  5:05 pm
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "fontSize": 16,
+                      "fontWeight": "600",
+                      "paddingHorizontal": 3,
+                    }
+                  }
+                >
+                  2
+                  hr
+                  s
+                </Text>
+              </View>
+            </View>
+            <Image
+              source={
+                Object {
+                  "uri": "https://via.placeholder.com/150",
+                }
+              }
+              style={
+                Object {
+                  "borderRadius": 200,
+                  "height": 190.57142857142858,
+                  "width": 190.57142857142858,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>
+</View>
+`;

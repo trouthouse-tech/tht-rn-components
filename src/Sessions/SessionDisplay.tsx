@@ -7,7 +7,7 @@ import {SessionList} from './SessionsList';
 import {SessionToggler} from './SessionToggler';
 
 export const SessionDisplay: React.FC<SessionTypes.SessionMessageListProps> = ({
-  messages,
+  sessions,
 }) => {
   const [currentMessageStatus, setcurrentMessageStatus] = React.useState<
     SessionTypes.SessionMessageTypeEnum
@@ -31,7 +31,7 @@ export const SessionDisplay: React.FC<SessionTypes.SessionMessageListProps> = ({
         currentMessageType={currentMessageStatus}
       />
       <SessionList
-        messages={messages.filter(
+        sessions={sessions.filter(
           (m) => m.messageType === currentMessageStatus
         )}
       />
