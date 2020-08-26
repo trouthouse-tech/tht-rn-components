@@ -2,19 +2,19 @@ import React from 'react';
 
 import {View} from 'react-native';
 
-import {MessageTypes} from '../Types';
+import {SessionTypes} from '../Types';
 import {SessionList} from './SessionsList';
 import {SessionToggler} from './SessionToggler';
 
-export const SessionDisplay: React.FC<MessageTypes.SessionMessageListProps> = ({
+export const SessionDisplay: React.FC<SessionTypes.SessionMessageListProps> = ({
   messages,
 }) => {
   const [currentMessageStatus, setcurrentMessageStatus] = React.useState<
-    MessageTypes.SessionMessageTypeEnum
-  >(MessageTypes.SessionMessageTypeEnum.Scheduled);
+    SessionTypes.SessionMessageTypeEnum
+  >(SessionTypes.SessionMessageTypeEnum.Scheduled);
 
   const toggleMessageStatus = (
-    selectedMessageStatus: MessageTypes.SessionMessageTypeEnum
+    selectedMessageStatus: SessionTypes.SessionMessageTypeEnum
   ) => {
     console.log(selectedMessageStatus);
     setcurrentMessageStatus(selectedMessageStatus);
@@ -24,7 +24,7 @@ export const SessionDisplay: React.FC<MessageTypes.SessionMessageListProps> = ({
     <View>
       <SessionToggler
         onPress={(
-          selectedMessageStatus: MessageTypes.SessionMessageTypeEnum
+          selectedMessageStatus: SessionTypes.SessionMessageTypeEnum
         ) => {
           return toggleMessageStatus(selectedMessageStatus);
         }}

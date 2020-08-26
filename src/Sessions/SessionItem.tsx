@@ -3,10 +3,10 @@ import moment from 'moment';
 
 import {View, Text, Image, StyleSheet, Dimensions} from 'react-native';
 
-import {MessageTypes} from '../Types';
+import {SessionTypes, BaseTypes} from '../Types';
 import {Colors, Fonts} from '../styles';
 
-export const SessionItem: React.FC<MessageTypes.SessionMessageItemProps> = (
+export const SessionItem: React.FC<SessionTypes.SessionMessageItemProps> = (
   props
 ) => {
   const {
@@ -26,13 +26,13 @@ export const SessionItem: React.FC<MessageTypes.SessionMessageItemProps> = (
           {notes}
         </Text>
 
-        {status !== MessageTypes.MessageStatusEnum.Completed ? (
+        {status !== BaseTypes.MessageStatusEnum.Completed ? (
           <View style={styles.dateTextViewStyle}>
             <Text style={styles.dateDisplayTextStyle}>
-              {moment(date).format('DD/MM/YY')}
+              {moment.unix(date).format('DD/MM/YY')}
             </Text>
             <Text style={styles.dateDisplayTextStyle}>
-              {moment(date).format('h:mm a')}
+              {moment.unix(date).format('h:mm a')}
             </Text>
             <Text style={styles.dateDisplayTextStyle}>
               {durationInHours}hr{durationInHours > 1 ? 's' : ''}

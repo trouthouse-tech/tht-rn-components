@@ -1,3 +1,5 @@
+import * as BaseTypes from './Base/';
 import * as MessageTypes from './Messages/';
+import * as SessionTypes from './Sessions/';
 
-export {MessageTypes};
+export {BaseTypes, MessageTypes, SessionTypes};

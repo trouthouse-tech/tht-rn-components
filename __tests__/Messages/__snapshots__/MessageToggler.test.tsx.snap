@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MessageToggler /> should match snapshot 1`] = `
+<View
+  style={
+    Object {
+      "borderBottomColor": "#C5CCD6",
+      "borderBottomWidth": 0.5,
+      "flexDirection": "row",
+      "marginHorizontal": 5,
+      "marginTop": 5,
+    }
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "color": "#D3D3D3",
+        "flex": 1,
+        "fontSize": 18,
+        "opacity": 1,
+        "paddingBottom": 10,
+      }
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#000000",
+            "fontSize": 20,
+          },
+          null,
+        ]
+      }
+    >
+      Sessions
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "borderBottomColor": "#000000",
+        "borderBottomWidth": 3,
+        "color": "#D3D3D3",
+        "flex": 1,
+        "fontSize": 18,
+        "opacity": 1,
+        "paddingBottom": 10,
+      }
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#000000",
+            "fontSize": 20,
+          },
+          Object {
+            "fontWeight": "bold",
+          },
+        ]
+      }
+    >
+      Requests
+    </Text>
+  </View>
+</View>
+`;

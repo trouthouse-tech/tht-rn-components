@@ -4,44 +4,44 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet, View, Text, StatusBar} from 'react-native';
 
-import {MessageTypes} from './src/Types/';
+import {SessionTypes, BaseTypes} from './src/Types/';
 
 import {SessionDisplay} from './src/Sessions/SessionDisplay';
 
 import {Colors, Fonts} from './src/styles/';
 
 const App = () => {
-  const messagesList: MessageTypes.SessionMessageListProps = {
+  const messagesList: SessionTypes.SessionMessageListProps = {
     messages: [
       {
-        messageType: MessageTypes.SessionMessageTypeEnum.Scheduled,
+        messageType: SessionTypes.SessionMessageTypeEnum.Scheduled,
         name: 'Edwards Moses',
-        status: MessageTypes.MessageStatusEnum.Completed,
-        date: new Date(),
+        status: BaseTypes.MessageStatusEnum.Completed,
+        date: 1598285158,
         notes: "I'd like to work as a driver",
         durationInHours: 3,
       },
       {
-        messageType: MessageTypes.SessionMessageTypeEnum.History,
+        messageType: SessionTypes.SessionMessageTypeEnum.History,
         name: 'Joe Buey',
-        status: MessageTypes.MessageStatusEnum.Scheduled,
-        date: new Date(),
+        status: BaseTypes.MessageStatusEnum.Scheduled,
+        date: 1598457958,
         notes: "I'd like to work as a driver",
         durationInHours: 1,
       },
       {
-        messageType: MessageTypes.SessionMessageTypeEnum.Scheduled,
+        messageType: SessionTypes.SessionMessageTypeEnum.Scheduled,
         name: 'Matthew Ruiz',
-        status: MessageTypes.MessageStatusEnum.Canceled,
-        date: new Date(),
+        status: BaseTypes.MessageStatusEnum.Canceled,
+        date: 1598285158,
         notes: "I'd like to work as a driver",
         durationInHours: 3,
       },
       {
-        messageType: MessageTypes.SessionMessageTypeEnum.History,
+        messageType: SessionTypes.SessionMessageTypeEnum.History,
         name: 'Types Working',
-        status: MessageTypes.MessageStatusEnum.Canceled,
-        date: new Date(),
+        status: BaseTypes.MessageStatusEnum.Canceled,
+        date: 1598457958,
         notes: "I'd like to work as a Type that's working",
         durationInHours: 2,
       },

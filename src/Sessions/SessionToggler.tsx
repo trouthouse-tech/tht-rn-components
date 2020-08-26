@@ -2,18 +2,18 @@ import React from 'react';
 
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 
-import {MessageTypes} from '../Types';
+import {SessionTypes} from '../Types';
 import {Colors, Fonts} from '../styles';
 
-export const SessionToggler: React.FC<MessageTypes.SessionTogglerProps> = (
+export const SessionToggler: React.FC<SessionTypes.SessionTogglerProps> = (
   props
 ) => {
   const {currentMessageType, onPress} = props;
 
   return (
     <View style={styles.tabsStyle}>
-      {Object.values(MessageTypes.SessionMessageTypeEnum).map(
-        (key: MessageTypes.SessionMessageTypeEnum, index: number) => {
+      {Object.values(SessionTypes.SessionMessageTypeEnum).map(
+        (key: SessionTypes.SessionMessageTypeEnum, index: number) => {
           const isSelected = currentMessageType === key;
           return (
             <TouchableOpacity
@@ -30,7 +30,7 @@ export const SessionToggler: React.FC<MessageTypes.SessionTogglerProps> = (
                   styles.tabTextStyle,
                   isSelected ? styles.selectedTabTextStyle : null,
                 ]}>
-                {MessageTypes.SessionMessageTypeEnum[key]}
+                {SessionTypes.SessionMessageTypeEnum[key]}
               </Text>
             </TouchableOpacity>
           );

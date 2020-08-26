@@ -3,7 +3,7 @@ import moment from 'moment';
 
 import {View, Text, Image, StyleSheet, Dimensions} from 'react-native';
 
-import {MessageTypes} from '../Types/';
+import {MessageTypes, BaseTypes} from '../Types/';
 import {Colors, Fonts} from '../styles/';
 
 export const MessageItem: React.FC<MessageTypes.MessageItemProps> = (props) => {
@@ -13,13 +13,13 @@ export const MessageItem: React.FC<MessageTypes.MessageItemProps> = (props) => {
       <View>
         <Text style={styles.nameTextStyle}>{name}</Text>
 
-        {status !== MessageTypes.MessageStatusEnum.Completed ? (
+        {status !== BaseTypes.MessageStatusEnum.Completed ? (
           <View style={styles.dateTextViewStyle}>
             <Text style={styles.dateDisplayTextStyle}>
-              {moment(date).format('DD/MM/YY')}
+              {moment.unix(date).format('DD/MM/YY')}
             </Text>
             <Text style={styles.dateDisplayTextStyle}>
-              {moment(date).format('h:mm a')}
+              {moment.unix(date).format('h:mm a')}
             </Text>
           </View>
         ) : (

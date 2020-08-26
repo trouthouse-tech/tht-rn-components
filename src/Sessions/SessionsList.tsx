@@ -2,21 +2,21 @@ import React from 'react';
 
 import {View, FlatList, StyleSheet} from 'react-native';
 
-import {MessageTypes} from '../Types';
+import {SessionTypes} from '../Types';
 import {SessionItem} from './SessionItem';
 
-export const SessionList: React.FC<MessageTypes.SessionMessageListProps> = ({
+export const SessionList: React.FC<SessionTypes.SessionMessageListProps> = ({
   messages,
 }) => {
   return (
     <View style={styles.listStyle}>
       <FlatList
         keyExtractor={(
-          item: MessageTypes.SessionMessageItemProps,
+          item: SessionTypes.SessionMessageItemProps,
           index: number
         ) => index.toString()}
         data={messages}
-        renderItem={({item}: {item: MessageTypes.SessionMessageItemProps}) => (
+        renderItem={({item}: {item: SessionTypes.SessionMessageItemProps}) => (
           <SessionItem
             name={item.name}
             status={item.status}
