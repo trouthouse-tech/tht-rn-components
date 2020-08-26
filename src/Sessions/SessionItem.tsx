@@ -22,7 +22,9 @@ export const SessionItem: React.FC<MessageTypes.SessionMessageItemProps> = (
       <View>
         <Text style={styles.nameTextStyle}>{name}</Text>
 
-        <Text>{notes}</Text>
+        <Text style={styles.notesTextStyle} numberOfLines={2}>
+          {notes}
+        </Text>
 
         {status !== MessageTypes.MessageStatusEnum.Completed ? (
           <View style={styles.dateTextViewStyle}>
@@ -33,7 +35,7 @@ export const SessionItem: React.FC<MessageTypes.SessionMessageItemProps> = (
               {moment(date).format('h:mm a')}
             </Text>
             <Text style={styles.dateDisplayTextStyle}>
-              {durationInHours} hr{durationInHours > 1 ? 's' : ''}
+              {durationInHours}hr{durationInHours > 1 ? 's' : ''}
             </Text>
           </View>
         ) : (
@@ -46,6 +48,8 @@ export const SessionItem: React.FC<MessageTypes.SessionMessageItemProps> = (
 };
 
 const deviceHeight = Dimensions.get('window').height;
+const deviceWidth = Dimensions.get('window').width;
+
 const styles = StyleSheet.create({
   messageStyle: {
     borderWidth: StyleSheet.hairlineWidth,
@@ -63,6 +67,10 @@ const styles = StyleSheet.create({
     color: Colors.Black,
     fontSize: Fonts.large,
     fontWeight: '700',
+  },
+  notesTextStyle: {
+    fontSize: Fonts.small,
+    width: deviceWidth / 3,
   },
   dateTextViewStyle: {
     flexDirection: 'row',
