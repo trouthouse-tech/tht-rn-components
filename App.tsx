@@ -14,7 +14,6 @@ const App = () => {
   const messagesList: SessionTypes.SessionMessageListProps = {
     sessions: [
       {
-        messageType: SessionTypes.SessionMessageTypeEnum.Scheduled,
         name: 'Edwards Moses',
         status: BaseTypes.MessageStatusEnum.Completed,
         date: 1598285158,
@@ -22,7 +21,6 @@ const App = () => {
         durationInHours: 3,
       },
       {
-        messageType: SessionTypes.SessionMessageTypeEnum.History,
         name: 'Joe Buey',
         status: BaseTypes.MessageStatusEnum.Scheduled,
         date: 1598457958,
@@ -30,7 +28,6 @@ const App = () => {
         durationInHours: 1,
       },
       {
-        messageType: SessionTypes.SessionMessageTypeEnum.Scheduled,
         name: 'Matthew Ruiz',
         status: BaseTypes.MessageStatusEnum.Canceled,
         date: 1598285158,
@@ -38,7 +35,6 @@ const App = () => {
         durationInHours: 3,
       },
       {
-        messageType: SessionTypes.SessionMessageTypeEnum.History,
         name: 'Types Working',
         status: BaseTypes.MessageStatusEnum.Canceled,
         date: 1598457958,

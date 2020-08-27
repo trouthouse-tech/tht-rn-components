@@ -10,7 +10,6 @@ describe('<SessionList />', () => {
   const SessionsList: SessionTypes.SessionMessageListProps = {
     sessions: [
       {
-        messageType: SessionTypes.SessionMessageTypeEnum.History,
         name: 'Edwards Moses',
         status: BaseTypes.MessageStatusEnum.Completed,
         date: 1598457958,
@@ -18,7 +17,6 @@ describe('<SessionList />', () => {
         notes: 'Note for test',
       },
       {
-        messageType: SessionTypes.SessionMessageTypeEnum.Scheduled,
         name: 'Edwards Moses',
         status: BaseTypes.MessageStatusEnum.Canceled,
         date: 1598457958,

@@ -8,7 +8,6 @@ afterEach(cleanup);
 
 describe('<MessageItem />', () => {
   const session: SessionTypes.SessionMessageItemProps = {
-    messageType: SessionTypes.SessionMessageTypeEnum.History,
     name: 'Edwards Moses',
     status: BaseTypes.MessageStatusEnum.Completed,
     date: 1598457958,
@@ -24,7 +23,6 @@ describe('<MessageItem />', () => {
         date={session.date}
         notes={session.notes}
         durationInHours={session.durationInHours}
-        messageType={session.messageType}
       />
     ).toJSON();
 

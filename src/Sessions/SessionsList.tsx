@@ -20,7 +20,6 @@ export const SessionList: React.FC<SessionTypes.SessionMessageListProps> = ({
           <SessionItem
             name={item.name}
             status={item.status}
-            messageType={item.messageType}
             date={item.date}
             notes={item.notes}
             durationInHours={item.durationInHours}

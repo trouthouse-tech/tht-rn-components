@@ -1,14 +1,14 @@
 import {BaseMessageProps} from '../Base/';
 
-export enum SessionMessageTypeEnum {
-  Scheduled = 'Scheduled',
-  History = 'History',
-}
+export type SessionTabProps = {
+  title: string;
+  isSelected: boolean;
+  onPress: () => void;
+};
 
 export type SessionMessageItemProps = BaseMessageProps & {
   notes: string;
   durationInHours: number;
-  messageType: SessionMessageTypeEnum;
 };
 
 export type SessionMessageListProps = {
@@ -16,6 +16,6 @@ export type SessionMessageListProps = {
 };
 
 export type SessionTogglerProps = {
-  currentMessageType: SessionMessageTypeEnum;
-  onPress: (selectedMessageStatus: SessionMessageTypeEnum) => void;
+  showScheduled: boolean;
+  onPress: (showScheduled: boolean) => void;
 };

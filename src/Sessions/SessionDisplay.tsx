@@ -2,39 +2,36 @@ import React from 'react';
 
 import {View} from 'react-native';
 
-import {SessionTypes} from '../Types';
+import {SessionTypes, BaseTypes} from '../Types';
 import {SessionList} from './SessionsList';
 import {SessionToggler} from './SessionToggler';
 
 export const SessionDisplay: React.FC<SessionTypes.SessionMessageListProps> = ({
   sessions,
 }) => {
-  const [currentMessageStatus, setcurrentMessageStatus] = React.useState<
-    SessionTypes.SessionMessageTypeEnum
-  >(SessionTypes.SessionMessageTypeEnum.Scheduled);
-
-  const toggleMessageStatus = (
-    selectedMessageStatus: SessionTypes.SessionMessageTypeEnum
-  ) => {
-    console.log(selectedMessageStatus);
-    setcurrentMessageStatus(selectedMessageStatus);
+  const toggleSessionsToDisplay = (showScheduled: boolean) => {
+    if (showScheduled) {
+      return sessions.filter(
+        (m) => m.status === BaseTypes.MessageStatusEnum.Scheduled
+      );
+    } else {
+      return sessions.filter(
+        (m) => m.status !== BaseTypes.MessageStatusEnum.Scheduled
+      );
+    }
   };
+
+  const [showScheduledSession, setShowScheduledSession] = React.useState(true);
 
   return (
     <View>
       <SessionToggler
-        onPress={(
-          selectedMessageStatus: SessionTypes.SessionMessageTypeEnum
-        ) => {
-          return toggleMessageStatus(selectedMessageStatus);
+        onPress={(showScheduled: boolean) => {
+          setShowScheduledSession(showScheduled);
         }}
-        currentMessageType={currentMessageStatus}
+        showScheduled={showScheduledSession}
       />
-      <SessionList
-        sessions={sessions.filter(
-          (m) => m.messageType === currentMessageStatus
-        )}
-      />
+      <SessionList sessions={toggleSessionsToDisplay(showScheduledSession)} />
     </View>
   );
 };

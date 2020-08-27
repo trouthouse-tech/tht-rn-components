@@ -5,37 +5,47 @@ import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import {SessionTypes} from '../Types';
 import {Colors, Fonts} from '../styles';
 
+const SessionTab: React.FC<SessionTypes.SessionTabProps> = ({
+  title,
+  isSelected,
+  onPress,
+}) => {
+  return (
+    <TouchableOpacity
+      onPress={onPress}
+      style={[styles.tabStyle, isSelected ? styles.selectedTabStyle : null]}>
+      <Text
+        style={[
+          styles.tabTextStyle,
+          isSelected ? styles.selectedTabTextStyle : null,
+        ]}>
+        {title}
+      </Text>
+    </TouchableOpacity>
+  );
+};
+
 export const SessionToggler: React.FC<SessionTypes.SessionTogglerProps> = (
   props
 ) => {
-  const {currentMessageType, onPress} = props;
+  const {showScheduled, onPress} = props;
 
   return (
     <View style={styles.tabsStyle}>
-      {Object.values(SessionTypes.SessionMessageTypeEnum).map(
-        (key: SessionTypes.SessionMessageTypeEnum, index: number) => {
-          const isSelected = currentMessageType === key;
-          return (
-            <TouchableOpacity
-              key={index}
-              onPress={() => {
-                onPress(key);
-              }}
-              style={[
-                styles.tabStyle,
-                isSelected ? styles.selectedTabStyle : null,
-              ]}>
-              <Text
-                style={[
-                  styles.tabTextStyle,
-                  isSelected ? styles.selectedTabTextStyle : null,
-                ]}>
-                {SessionTypes.SessionMessageTypeEnum[key]}
-              </Text>
-            </TouchableOpacity>
-          );
-        }
-      )}
+      <SessionTab
+        title="Scheduled"
+        onPress={() => {
+          onPress(true);
+        }}
+        isSelected={showScheduled}
+      />
+      <SessionTab
+        title="History"
+        onPress={() => {
+          onPress(false);
+        }}
+        isSelected={!showScheduled}
+      />
     </View>
   );
 };

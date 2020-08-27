@@ -14,7 +14,6 @@ exports[`<SessionList /> should match snapshot 1`] = `
         Object {
           "date": 1598457958,
           "durationInHours": 1,
-          "messageType": "History",
           "name": "Edwards Moses",
           "notes": "Note for test",
           "status": "Completed",
@@ -22,7 +21,6 @@ exports[`<SessionList /> should match snapshot 1`] = `
         Object {
           "date": 1598457958,
           "durationInHours": 2,
-          "messageType": "Scheduled",
           "name": "Edwards Moses",
           "notes": "Second Test Note",
           "status": "Canceled",
