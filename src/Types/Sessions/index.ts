@@ -8,7 +8,6 @@ export enum SessionMessageTypeEnum {
 export type SessionMessageItemProps = BaseMessageProps & {
   notes: string;
   durationInHours: number;
-  messageType: SessionMessageTypeEnum;
 };
 
 export type SessionMessageListProps = {
