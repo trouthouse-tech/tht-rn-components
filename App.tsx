@@ -3,28 +3,50 @@
  */
 import React from 'react';
 import {SafeAreaView, StyleSheet, View, Text, StatusBar} from 'react-native';
-import {Colors} from './src/styles/';
-import ActionList from './src/ActionList/ActionList';
-import {ActionListProps} from './src/ActionList/ListTypes';
+
+import {SessionTypes, BaseTypes} from './src/Types/';
+
+import {SessionDisplay} from './src/Sessions/SessionDisplay';
+
+import {Colors, Fonts} from './src/styles/';
 
 const App = () => {
-  const actions: ActionListProps = {
-    items: [
+  const messagesList: SessionTypes.SessionMessageListProps = {
+    sessions: [
       {
-        title: 'Edit Account',
-        route: 'EditAccount',
+        name: 'Edwards Moses',
+        status: BaseTypes.MessageStatusEnum.Completed,
+        date: 1598285158,
+        notes: "I'd like to work as a driver",
+        durationInHours: 3,
       },
       {
-        title: 'Traffic',
-        route: 'Traffic',
+        name: 'Joe Buey',
+        status: BaseTypes.MessageStatusEnum.Scheduled,
+        date: 1598457958,
+        notes: "I'd like to work as a driver",
+        durationInHours: 1,
       },
       {
-        title: 'Terms and Conditions',
-        route: 'TermsAndConditions',
+        name: 'Matthew Ruiz',
+        status: BaseTypes.MessageStatusEnum.Canceled,
+        date: 1598285158,
+        notes: "I'd like to work as a driver",
+        durationInHours: 3,
       },
       {
-        title: 'Notifications',
-        route: 'Notifications',
+        name: 'Types Working',
+        status: BaseTypes.MessageStatusEnum.Canceled,
+        date: 1598457958,
+        notes: "I'd like to work as a Type that's working",
+        durationInHours: 2,
+      },
+      {
+        name: 'Is this Working?',
+        status: BaseTypes.MessageStatusEnum.Scheduled,
+        date: 1598457958,
+        notes: "I'd like to work as a Toggle Tab that's working",
+        durationInHours: 2,
       },
     ],
   };
@@ -34,8 +56,8 @@ const App = () => {
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
         <View style={styles.sectionContainer}>
-          <Text style={styles.sectionTitle}>Settings</Text>
-          <ActionList items={actions.items} />
+          <Text style={styles.sectionTitle}>Help</Text>
+          <SessionDisplay sessions={messagesList.sessions} />
         </View>
       </SafeAreaView>
     </>
@@ -48,14 +70,14 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
   },
   sectionTitle: {
-    fontSize: 24,
+    fontSize: Fonts.larger,
     fontWeight: '600',
     color: Colors.Black,
     paddingVertical: 10,
   },
   sectionDescription: {
     marginTop: 8,
-    fontSize: 18,
+    fontSize: Fonts.normal,
     fontWeight: '400',
     color: Colors.Black,
   },
@@ -64,7 +86,7 @@ const styles = StyleSheet.create({
   },
   footer: {
     color: Colors.Black,
-    fontSize: 12,
+    fontSize: Fonts.small,
     fontWeight: '600',
     padding: 4,
     paddingRight: 12,
